@@ -23,9 +23,9 @@ class TodoAdd extends React.Component{
 
   render() {
     return (
-      <div>
-        <input ref="inputText" type="text" placeholder={this.props.placeholder} />
-        <input type="button" value="Add" onClick={this.handleOnClick} />
+      <div className="row">
+        <input className="col-md-8 col-md-offset-1 input-lg" ref="inputText" type="text" placeholder={this.props.placeholder} />
+        <button className="col-md-2 btn-lg btn-primary" onClick={this.handleOnClick}><span className="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
       </div>
     );
   }

@@ -41,7 +41,7 @@ class Todo extends React.Component {
         listIndex={i}/>;
     })
     return <div>
-      <h1>TODO LIST</h1>
+      <h1 className="col-md-12 text-center">TODO LIST</h1>
       <TodoAdd placeholder="Add a new Todo item" onClickAdd={this.addToList}/>
       <br />
       <br />

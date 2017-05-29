@@ -35,17 +35,21 @@ class TodoListItem extends React.Component {
     let input = this.state.editable;
     let btnValue = 'Edit';
     if(this.state.editable) {
-      input = <input ref="editBox" type="text" defaultValue={this.props.desc} />
+      input = <input className="col-md-8 col-md-offset-1" ref="editBox" type="text" defaultValue={this.props.desc} />
       btnValue = 'Update';
     } else {
-      input = <p> {this.props.desc} </p>
+      input = <p className="col-md-8 col-md-offset-1" > {this.props.desc} </p>
     }
 
     return (
-      <div>
-        <input type="button" value="Delete" onClick={this.deleteItem}/>
-        <input ref="updateBtn" type="button" value={btnValue} onClick={this.editItem} />
+      <div className="row">
         {input}
+        <button className="col-md-1 btn-danger" type="button" value="Delete" onClick={this.deleteItem}>
+          <span className="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+        <button className="col-md-1 btn-success" ref="updateBtn" type="button" value={btnValue} onClick={this.editItem} >
+          <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+        </button>
       </div>
     )
   }
