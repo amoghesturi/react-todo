@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class TodoListItem extends React.Component {
   constructor(props) {
@@ -53,6 +54,13 @@ class TodoListItem extends React.Component {
       </div>
     )
   }
+}
+
+TodoListItem.propTypes = {
+  desc: PropTypes.string,
+  listIndex: PropTypes.number,
+  delete: PropTypes.func,
+  update: PropTypes.func
 }
 
 export default TodoListItem;

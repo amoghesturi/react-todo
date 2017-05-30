@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class TodoAdd extends React.Component{
   constructor(props) {
     super(props);
-
     this.handleOnClick = this.handleOnClick.bind(this);
   }
 
@@ -19,8 +19,6 @@ class TodoAdd extends React.Component{
     this.refs.inputText.value = '';
   }
 
-
-
   render() {
     return (
       <div className="row">
@@ -29,6 +27,11 @@ class TodoAdd extends React.Component{
       </div>
     );
   }
+}
+
+TodoAdd.propTypes = {
+  onClickAdd: PropTypes.func,
+  placeholder: PropTypes.string
 }
 
 export default TodoAdd;

@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = {
   devtool: 'eval',
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
+    'webpack-dev-server/client?http://localhost:8888',
     './src/index.js'
   ],
   output: {
