@@ -2,14 +2,14 @@ var path = require('path');
 
 module.exports = {
   devtool: 'eval',
-  entry: [
-    'webpack-dev-server/client?http://localhost:8888',
-    './src/index.js'
-  ],
+  entry: './src/index.js',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/build/'
+  },
+  devServer: {
+    port: 3000
   },
   module: {
     loaders: [
