@@ -1874,6 +1874,16 @@
         "sha.js": "2.4.8"
       }
     },
+    "create-react-class": {
+      "version": "15.6.0",
+      "resolved": "https://registry.npmjs.org/create-react-class/-/create-react-class-15.6.0.tgz",
+      "integrity": "sha1-q0SEl8JlZuHilBPogyB9V8/nvtQ=",
+      "requires": {
+        "fbjs": "0.8.12",
+        "loose-envify": "1.3.1",
+        "object-assign": "4.1.1"
+      }
+    },
     "cross-spawn": {
       "version": "3.0.1",
       "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-3.0.1.tgz",
@@ -2835,6 +2845,19 @@
         "asynckit": "0.4.0",
         "combined-stream": "1.0.5",
         "mime-types": "2.1.15"
+      }
+    },
+    "form-data-to-object": {
+      "version": "0.2.0",
+      "resolved": "https://registry.npmjs.org/form-data-to-object/-/form-data-to-object-0.2.0.tgz",
+      "integrity": "sha1-96jmjd2RChEApl4lrGpIQUP/gWg="
+    },
+    "formsy-react": {
+      "version": "0.19.5",
+      "resolved": "https://registry.npmjs.org/formsy-react/-/formsy-react-0.19.5.tgz",
+      "integrity": "sha1-dgpXrAETRC499MMJw2ON2SlX544=",
+      "requires": {
+        "form-data-to-object": "0.2.0"
       }
     },
     "forwarded": {
@@ -4908,6 +4931,11 @@
       "integrity": "sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=",
       "dev": true
     },
+    "lodash.forown": {
+      "version": "4.4.0",
+      "resolved": "https://registry.npmjs.org/lodash.forown/-/lodash.forown-4.4.0.tgz",
+      "integrity": "sha1-hRFc8E9z75ZuztUlEdOJPMRmg68="
+    },
     "lodash.memoize": {
       "version": "4.1.2",
       "resolved": "https://registry.npmjs.org/lodash.memoize/-/lodash.memoize-4.1.2.tgz",
@@ -4919,6 +4947,11 @@
       "resolved": "https://registry.npmjs.org/lodash.mergewith/-/lodash.mergewith-4.6.0.tgz",
       "integrity": "sha1-FQzwoWeR9ZA7iJHqsVRgknS96lU=",
       "dev": true
+    },
+    "lodash.remove": {
+      "version": "4.7.0",
+      "resolved": "https://registry.npmjs.org/lodash.remove/-/lodash.remove-4.7.0.tgz",
+      "integrity": "sha1-8x0x58OaBpDVB07A02JxYjNO5iY="
     },
     "lodash.tail": {
       "version": "4.1.1",
@@ -6258,26 +6291,19 @@
       "dev": true
     },
     "react": {
-      "version": "15.5.4",
-      "resolved": "https://registry.npmjs.org/react/-/react-15.5.4.tgz",
-      "integrity": "sha1-+oPrAVBqsjfNwcjDsc6o3gEr8Ec=",
+      "version": "15.3.2",
+      "resolved": "https://registry.npmjs.org/react/-/react-15.3.2.tgz",
+      "integrity": "sha1-p7zNL+6K8SawMX4iLCjR1UUo0J4=",
       "requires": {
         "fbjs": "0.8.12",
         "loose-envify": "1.3.1",
-        "object-assign": "4.1.1",
-        "prop-types": "15.5.10"
+        "object-assign": "4.1.1"
       }
     },
     "react-dom": {
-      "version": "15.5.4",
-      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-15.5.4.tgz",
-      "integrity": "sha1-ugwoeG/VLtfk8hNf4CiNRirvk9o=",
-      "requires": {
-        "fbjs": "0.8.12",
-        "loose-envify": "1.3.1",
-        "object-assign": "4.1.1",
-        "prop-types": "15.5.10"
-      }
+      "version": "15.3.2",
+      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-15.3.2.tgz",
+      "integrity": "sha1-xGsKpTgNe4OOelnEp77/LtMVUx8="
     },
     "read-pkg": {
       "version": "1.1.0",

@@ -1,37 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { HOC } from 'formsy-react';
 
 class TodoAdd extends React.Component{
   constructor(props) {
     super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
   }
 
-  handleOnClick(e) {
+  handleOnChange(e) {
     e.preventDefault();
-
-    // call the parent function to store the new todo
-    let newTodo = this.refs.inputText.value;
-    if (newTodo) {
-      this.props.onClickAdd(newTodo);
-    }
-    // clear the input text field
-    this.refs.inputText.value = '';
+    this.props.setValue(e.currentTarget.value);
   }
 
   render() {
     return (
       <div className="row">
-        <input className="col-md-8 col-md-offset-1 input-lg" ref="inputText" type="text" placeholder={this.props.placeholder} />
-        <button className="col-md-2 btn-lg btn-primary" onClick={this.handleOnClick}><span className="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+        <input className="col-md-8 col-md-offset-1 input-lg"
+          type="text"
+          ref="newTodo"
+          value={this.props.getValue() || ''}
+          onChange={this.handleOnChange}
+          placeholder={this.props.placeholder}
+          required
+        />
+        <button className="col-md-2 btn-lg btn-primary"
+          type="submit">
+          <span className="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
       </div>
     );
   }
 }
 
 TodoAdd.propTypes = {
-  onClickAdd: PropTypes.func,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  setValue: PropTypes.func,
+  resetValue: PropTypes.func,
+  getValue: PropTypes.func,
 }
 
-export default TodoAdd;
+export default HOC(TodoAdd);

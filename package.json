@@ -33,9 +33,13 @@
   },
   "dependencies": {
     "babel-loader": "^7.0.0",
+    "create-react-class": "^15.6.0",
+    "formsy-react": "^0.19.5",
+    "lodash.forown": "^4.4.0",
+    "lodash.remove": "^4.7.0",
     "prop-types": "^15.5.10",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react": "~15.3.2",
+    "react-dom": "~15.3.2"
   },
   "main": "server.js"
 }
