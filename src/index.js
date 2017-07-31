@@ -6,6 +6,16 @@ require('../styles/application.scss');
 // Render the top-level React component
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.js';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
-ReactDOM.render(<App />, document.getElementById('react-root'));
+import App from './components/App';
+import reducers from './reducers/';
+
+// Create React store
+const store = createStore(reducers);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>, document.getElementById('react-root'));

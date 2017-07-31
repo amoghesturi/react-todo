@@ -10,7 +10,10 @@ class TodoAdd extends React.Component{
 
   handleOnChange(e) {
     e.preventDefault();
-    this.props.setValue(e.currentTarget.value);
+    this.props.setValue({
+      title: e.currentTarget.value,
+      id: this.props.getValue().id,
+    });
   }
 
   render() {
@@ -19,13 +22,12 @@ class TodoAdd extends React.Component{
         <input className="col-md-8 col-md-offset-1 input-lg"
           type="text"
           ref="newTodo"
-          value={this.props.getValue() || ''}
+          value={this.props.getValue().title || ''}
           onChange={this.handleOnChange}
           placeholder={this.props.placeholder}
           required
         />
-        <button className="col-md-2 btn-lg btn-primary"
-          type="submit">
+        <button className="col-md-2 btn-lg btn-primary" type="submit">
           <span className="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>

@@ -8,22 +8,17 @@ class TodoListItem extends React.Component {
     this.toggleCheckbox = this.toggleCheckbox.bind(this);
   }
 
-  // deleteItem(e) {
-  //   e.preventDefault();
-  //   this.props.delete(this.props.listIndex);
-  // }
-
   handleClickEdit(e) {
     e.preventDefault();
     if (this.props.editable && this.refs.editBox && this.refs.editBox.value) {
       this.props.editTodo(this.props.listIndex, this.refs.editBox.value);
     } else {
-      this.props.onClickEdit(this.props.listIndex);
+      this.props.onClickEdit(this.props.listIndex, this.props.editable);
     }
   }
 
   toggleCheckbox() {
-    this.props.toggleCheckbox(this.props.listIndex);
+    this.props.toggleCheckbox(this.props.listIndex, this.props.checked);
   }
 
   render() {
@@ -44,9 +39,6 @@ class TodoListItem extends React.Component {
       <div className="row">
         <input type="checkbox" className="col-md-1" checked={this.props.checked} onClick={this.toggleCheckbox}/>
         {input}
-        {/* <button className="col-md-1 btn-danger" type="button" value="Delete" onClick={this.deleteItem}>
-          <span className="glyphicon glyphicon-remove" aria-hidden="true"></span>
-        </button> */}
         <button className="col-md-1 btn-success" ref="updateBtn" type="button" value={btnValue} onClick={this.handleClickEdit} >
           {this.props.editable ? 'Update' : <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span>}
         </button>
